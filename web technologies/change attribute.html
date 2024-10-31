@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change HTML Attribute with JavaScript</title>
+    <script>
+        function changeImage() {
+            var image = document.getElementById("myImage");
+            image.src = "https://th.bing.com/th/id/OIP.uHaqRdiMzWSMCR2LzsmhtQHaEZ?w=246&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7";
+        }
+    </script>
+</head>
+<body>
+    <h1>JavaScript Change Attribute Example</h1>
+    <img id="myImage" src="https://th.bing.com/th/id/OIP.E4IJcali_762Oo_vNhhbFgHaEK?w=293&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Original Image">
+    <br><br>
+    <button onclick="changeImage()">Change Image</button>
+</body>
+</html>

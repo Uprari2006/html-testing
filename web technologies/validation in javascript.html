@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation Example</title>
+    <script>
+        function validateForm() {
+            var name = document.forms["myForm"]["name"].value;
+            var email = document.forms["myForm"]["email"].value;
+            var message = "";
+            
+            if (name == "") {
+                message += "Name must be filled out.\n";
+            }
+            if (email == "") {
+                message += "Email must be filled out.\n";
+            } else {
+                var atpos = email.indexOf("@");
+                var dotpos = email.lastIndexOf(".");
+                if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= email.length) {
+                    message += "Not a valid e-mail address.\n";
+                }
+            }
+            if (message != "") {
+                alert(message);
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>Sample Form with Validation</h1>
+    <form name="myForm" onsubmit="return validateForm()" method="post">
+        Name: <input type="text" name="name"><br><br>
+        Email: <input type="text" name="email"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+

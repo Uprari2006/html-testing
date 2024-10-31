@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Inbuilt Functions Example</title>
+    <script>
+        function showInbuiltFunctions() {
+            var num = 123.456;
+            var str = "Hello, World!";
+            var arr = [10, 20, 30, 40, 50];
+            
+            var roundedNumber = Math.round(num);
+            var uppercaseString = str.toUpperCase();
+            var arrayLength = arr.length;
+            var arraySum = arr.reduce((acc, val) => acc + val, 0);
+            
+            document.getElementById("roundedNumber").innerText = "Rounded Number: " + roundedNumber;
+            document.getElementById("uppercaseString").innerText = "Uppercase String: " + uppercaseString;
+            document.getElementById("arrayLength").innerText = "Array Length: " + arrayLength;
+            document.getElementById("arraySum").innerText = "Array Sum: " + arraySum;
+        }
+    </script>
+</head>
+<body>
+    <h1>JavaScript Inbuilt Functions Example</h1>
+    <button onclick="showInbuiltFunctions()">Show Inbuilt Functions</button>
+    
+    <p id="roundedNumber"></p>
+    <p id="uppercaseString"></p>
+    <p id="arrayLength"></p>
+    <p id="arraySum"></p>
+</body>
+</html>
